@@ -1,6 +1,6 @@
 # springboot-simple-webapp
 
-Simple Project for prototyping and testing springboot apps stack to integrate to it
+Simple Project for prototyping and testing springboot apps stack
 
 Requires:
  - Java 8
