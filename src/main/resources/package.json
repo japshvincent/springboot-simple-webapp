@@ -1,0 +1,20 @@
+{
+  "name": "springboot-simple-webapp",
+  "version": "0.0.1",
+  "main": "./src",
+  "dependencies": {
+    "grunt": "^1.0.2",
+    "grunt-cli": "^1.2.0",
+    "grunt-webpack": "^3.1.1",
+    "webpack": "4.3.0",
+    "webpack-dev-server": "^2.4.0"
+  },
+  "bin": {
+    "webpack": "./node_modules/.bin/webpack -p",
+    "grunt": "./node_modules/.bin/grunt"
+  },
+  "scripts": {
+    "prebuild": "npm install",
+    "build": "grunt webpack -p"
+  }
+}
