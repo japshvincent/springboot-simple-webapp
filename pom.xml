@@ -42,6 +42,14 @@
 			<scope>provided</scope>
 		</dependency>
 
+        <!-- dependencies for apache tiles -->
+        <dependency>
+            <groupId>org.apache.tiles</groupId>
+            <artifactId>tiles-jsp</artifactId>
+            <version>3.0.8</version>
+        </dependency>
+
+        <!-- dependencies for test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
