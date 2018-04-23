@@ -1,2 +1,10 @@
 .idea/
 target/
+./src/main/static/js/**
+./src/main/node
+./src/main/resources/etc
+./src/main/resources/node
+./src/main/resources/node_modules
+./src/main/resources/static
+./src/main/resources/npm-debug.log
+./src/main/resources/package-lock.json
