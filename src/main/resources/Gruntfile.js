@@ -20,6 +20,6 @@ module.exports = function(grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-webpack');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.registerTask('default', ['webpack', 'sass']);
 };

@@ -13,7 +13,7 @@
     "popper.js": "^1.14.3"
   },
   "devDependencies": {
-    "grunt-contrib-sass": "^1.0.0"
+    "grunt-sass": "^2.1.0"
   },
   "bin": {
     "webpack": "./node_modules/.bin/webpack -p",
