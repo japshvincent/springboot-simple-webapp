@@ -8,12 +8,29 @@
         <put-attribute name="title" value="" />
         <put-attribute name="header"
                        value="/WEB-INF/templates/defaultHeader.jsp" />
+        <put-attribute name="top" value="/WEB-INF/templates/defaultTopbar.jsp" />
+        <put-attribute name="side" value="/WEB-INF/templates/defaultSidebar.jsp" />
         <put-attribute name="body" value="" />
         <put-attribute name="footer"
                        value="/WEB-INF/templates/defaultFooter.jsp" />
     </definition>
     <definition name="index" extends="template-def">
         <put-attribute name="title" value="Home" />
+        <put-attribute name="body"
+                       value="/WEB-INF/jsp/index.jsp" />
+    </definition>
+    <definition name="dashboard" extends="template-def">
+        <put-attribute name="title" value="Dashboard" />
+        <put-attribute name="body"
+                       value="/WEB-INF/jsp/user/dashboard.jsp" />
+        <put-list-attribute name="crumbs">
+            <add-list-attribute>
+                <add-attribute id="activeLink" value="dashboard"/>
+            </add-list-attribute>
+        </put-list-attribute>
+    </definition>
+    <definition name="link3" extends="template-def">
+        <put-attribute name="title" value="Link 2" />
         <put-attribute name="body"
                        value="/WEB-INF/jsp/index.jsp" />
     </definition>
