@@ -7,8 +7,19 @@ module.exports = function(grunt) {
             },
             prod: webpackConfig,
             dev: Object.assign({ watch: false }, webpackConfig)
+        },
+        sass: {
+            dist: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    './static/css/bootstrap.css':'./src/scss/bootstrap.scss'
+                }
+            }
         }
     });
     grunt.loadNpmTasks('grunt-webpack');
-    grunt.registerTask('default', ['webpack']);
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.registerTask('default', ['webpack', 'sass']);
 };

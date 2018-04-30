@@ -7,3 +7,5 @@ Simple Project for prototyping and testing springboot apps stack
 Requires:
  - Java 8
  - Maven 3
+ 
+ deployed branch in: https://springboot-simple-proto-webapp.herokuapp.com/
