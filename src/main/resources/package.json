@@ -13,14 +13,7 @@
     "popper.js": "^1.14.3"
   },
   "devDependencies": {
-    "exports-loader": "^0.7.0",
-    "autoprefixer": "^8.3.0",
-    "css-loader": "^0.28.11",
-    "node-sass": "^4.8.3",
-    "postcss-loader": "^2.1.4",
-    "sass-loader": "^7.0.1",
-    "style-loader": "^0.21.0",
-    "extract-text-webpack-plugin": "^3.0.2"
+    "grunt-contrib-sass": "^1.0.0"
   },
   "bin": {
     "webpack": "./node_modules/.bin/webpack -p",
@@ -28,6 +21,6 @@
   },
   "scripts": {
     "prebuild": "npm install",
-    "build": "grunt webpack -p"
+    "build": "grunt default"
   }
 }
