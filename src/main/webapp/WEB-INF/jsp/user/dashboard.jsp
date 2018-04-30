@@ -1,5 +1,4 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<h2>Lorem Ipsum Dolor</h2>
+<h2>Dashboard</h2>
 <hr/>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam sodales, tempor massa eu, malesuada erat. Pellentesque efficitur, elit vel laoreet molestie, tortor neque ornare justo, sed ultrices felis neque non arcu. Nullam non ex sed felis tincidunt convallis sit amet et velit. Vivamus at augue urna. Nullam id sem eu ligula dignissim vehicula. Nam faucibus ornare metus, eget pulvinar lacus malesuada nec. Morbi dapibus neque libero, et eleifend elit efficitur gravida. Curabitur ornare nec ex nec ullamcorper. Curabitur sit amet velit vulputate, volutpat enim in, sodales velit.
 
