@@ -9,6 +9,17 @@
         <link rel="stylesheet" type="text/css" href="<spring:url value="/css/bootstrap.css"/>"/>
 
         <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Gaegu|Jua|Gamja+Flower" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64409105-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-64409105-2');
+        </script>
+
     </head>
     <body>
         <div>
