@@ -61,7 +61,13 @@
 			<version>1.9.3</version>
 		</dependency>
 
-        <!-- dependencies for test -->
+		<!-- DB dependencies -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+
+		<!-- dependencies for test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
