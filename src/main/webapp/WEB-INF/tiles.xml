@@ -14,6 +14,20 @@
         <put-attribute name="footer"
                        value="/WEB-INF/templates/defaultFooter.jsp" />
     </definition>
+    <definition name="static-def"
+                template="/WEB-INF/layout/staticLayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header"
+                       value="/WEB-INF/templates/defaultHeader.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer"
+                       value="/WEB-INF/templates/defaultFooter.jsp" />
+    </definition>
+    <definition name="login" extends="static-def">
+        <put-attribute name="title" value="Login" />
+        <put-attribute name="body"
+                       value="/WEB-INF/jsp/login.jsp" />
+    </definition>
     <definition name="index" extends="template-def">
         <put-attribute name="title" value="Home" />
         <put-attribute name="body"
