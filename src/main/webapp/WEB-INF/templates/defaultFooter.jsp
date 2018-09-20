@@ -1,4 +1,4 @@
-<footer class="footer" style="background-color: #e9ecef; margin-top:10px; width:100%; bottom:0;">
+<footer class="footer" style="background-color: #e9ecef; margin-top:10px; width:100%; bottom:0; position:absolute;">
     <div class="container text-center" style="font-family: 'Gamja Flower', cursive;">
         <span class="text-muted ">
             <blockquote>
