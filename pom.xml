@@ -135,7 +135,7 @@
 
 	<profiles>
 		<profile>
-			<id>local-quickdeploy</id>
+			<id>localQuickDeploy</id>
 			<build>
 				<plugins>
 					<plugin>
