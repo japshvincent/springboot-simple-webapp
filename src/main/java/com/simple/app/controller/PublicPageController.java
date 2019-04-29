@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PublicPageController {
     @RequestMapping(value = {"/", ""})
     public String blank() {
-        return "login";
+        return "loginProviders";
     }
 
     @RequestMapping(value = {"/index"})
