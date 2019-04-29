@@ -1,1 +1,1 @@
-<a href = "user">Click here to Google Login</a>
+<a href = "/login">Click here to Google Login</a>
