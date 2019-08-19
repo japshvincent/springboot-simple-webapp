@@ -1,4 +1,5 @@
 .idea/
+*.iml
 target/
 src/main/resources/.sass-cache
 src/main/resources/etc
