@@ -3,17 +3,17 @@
   "version": "0.0.1",
   "main": "./src",
   "dependencies": {
-    "grunt": "^1.0.2",
-    "grunt-cli": "^1.2.0",
-    "grunt-webpack": "^3.1.1",
-    "webpack": "^4.3.0",
-    "webpack-dev-server": ">=3.1.11",
-    "bootstrap": "^4.1.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.3"
+    "grunt": "^1.6.1",
+    "grunt-cli": "^1.5.0",
+    "grunt-webpack": "^6.0.0",
+    "grunt-sass": "^3.1.0",
+    "webpack": "^5.93.0",
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "node-sass": "^9.0.0"
   },
   "devDependencies": {
-    "grunt-sass": "^2.1.0"
+    "webpack-dev-server": "^5.0.4"
   },
   "bin": {
     "webpack": "./node_modules/.bin/webpack -p",

@@ -15,5 +15,6 @@ module.exports = {
     output: {
         path: PATHS.build,
         filename: '[name].min.js'
-    }
+    },
+    mode: 'development'
 };
