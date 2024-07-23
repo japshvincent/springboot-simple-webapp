@@ -9,9 +9,4 @@ public class PublicPageController {
     public String index() {
         return "index";
     }
-
-    @RequestMapping("/index_jsp")
-    public String indexJsp() {
-        return "/index";
-    }
 }
