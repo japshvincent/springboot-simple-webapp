@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Hello World</title>
 </head>
 <body>
     <h1>Hello World</h1>
+    <ul>
+        default: <span th:text="${defaultTestVal}" /></br>
+        request: <span th:text="${requestTestVal}" /></br>
+        session: <span th:text="${sessionTestVal}" /></br>
+        singleton: <span th:text="${singletonTestVal}" /></br>
+    </ul>
 </body>
 </html>
