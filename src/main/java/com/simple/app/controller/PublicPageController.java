@@ -7,11 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PublicPageController {
     @RequestMapping(value = {"","/", "/index"})
     public String index() {
-        return "index";
-    }
-
-    @RequestMapping("/index_jsp")
-    public String indexJsp() {
         return "/index";
     }
 }

@@ -6,13 +6,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
-import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
-import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 @Configuration
 @EnableWebMvc
@@ -33,22 +29,6 @@ public class MVCConfig implements WebMvcConfigurer {
         resolver.setOrder(1);
         return resolver;
     }
-
-    @Bean
-    public TilesViewResolver tilesViewResolver() {
-        TilesViewResolver resolver = new TilesViewResolver();
-        resolver.setOrder(0);
-        return resolver;
-    }
-
-    @Bean
-    public TilesConfigurer tilesConfigurer() {
-        TilesConfigurer configurer = new TilesConfigurer();
-        configurer.setDefinitions("/WEB-INF/tiles.xml");
-        configurer.setCheckRefresh(true);
-        return configurer;
-    }
-    // setup view resolvers end
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry resourceHandlerRegistry) {
