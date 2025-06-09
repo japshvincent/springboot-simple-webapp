@@ -73,6 +73,54 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+
+		<!-- axis2 dependencies -->
+		<!-- You might also need these Axis2 dependencies -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-adb</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.ws.rs</groupId>
+					<artifactId>jsr311-api</artifactId>
+				</exclusion>
+			</exclusions>
+			<version>1.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-xmlbeans</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.ws.rs</groupId>
+					<artifactId>jsr311-api</artifactId>
+				</exclusion>
+			</exclusions>
+			<version>1.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-http</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.ws.rs</groupId>
+					<artifactId>jsr311-api</artifactId>
+				</exclusion>
+			</exclusions>
+			<version>1.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-local</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.ws.rs</groupId>
+					<artifactId>jsr311-api</artifactId>
+				</exclusion>
+			</exclusions>
+			<version>1.8.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -119,6 +167,53 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.axis2</groupId>
+				<artifactId>axis2-wsdl2code-maven-plugin</artifactId>
+				<version>1.8.1</version>
+				<executions>
+					<!-- First execution for EmergContactsLastUpDate WSDL -->
+					<execution>
+						<id>generate-emergcontactslastupdate-stubs</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>wsdl2code</goal>
+						</goals>
+						<configuration>
+							<packageName>com.example</packageName>
+							<wsdlFile>src/wsdl/SampleService.wsdl</wsdlFile>
+							<outputDirectory>src/axis2-gen/</outputDirectory>
+							<databindingName>adb</databindingName>
+							<generateServerSide>false</generateServerSide>
+							<generateAllClasses>true</generateAllClasses>
+							<extraClasses>true</extraClasses>
+							<useSOAP12>false</useSOAP12>
+							<namespaceToPackages>
+								https://example.com/Service=com.example,
+								http://localhost/Service/Work=com.example.generated.service.local
+							</namespaceToPackages>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<compileSourceRoots>
+						<compileSourceRoot>${basedir}/src/main/java</compileSourceRoot>
+						<compileSourceRoot>${basedir}/src/axis2-gen</compileSourceRoot>
+					</compileSourceRoots>
+					<!-- this shows compilation errors hidden by maven -->
+					<forceJavacCompilerUse>true</forceJavacCompilerUse>
+					<target>11</target>
+					<source>11</source>
+					<release>11</release>
+				</configuration>
+			</plugin>
+
 		</plugins>
 		<resources>
 			<resource>
